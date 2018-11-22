@@ -117,7 +117,7 @@ public class PersonalityModelInterpretation {
     }
 
     public static void main(String[] args) throws Exception{
-        System.out.println("Interpreting Models");
+        /*System.out.println("Interpreting Models");
         CSVLoader loader = new CSVLoader();
         loader.setSource(new File(args[0]));
         Instances data = loader.getDataSet();
@@ -130,6 +130,13 @@ public class PersonalityModelInterpretation {
         NNTest(data,args[3]);
         SVMTest(data,args[4]);
         writeCSV(args[5]);
+        */
+        System.out.println("Showing Data from SqlLite3");
+        SqlLiteDatabase sld = new SqlLiteDatabase();
+        sld.selectAll();
+        System.out.println("Opening Notepad");
+        ProcessBuilder pb = new ProcessBuilder("Notepad.exe");
+        pb.start();
 
         // TODO code application logic here
     }
